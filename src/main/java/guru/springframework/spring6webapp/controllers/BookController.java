@@ -20,6 +20,8 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model) {
 
+        System.out.println("Inside books service");
+
         model.addAttribute("books", bookService.findAll());
 
         return "books";
